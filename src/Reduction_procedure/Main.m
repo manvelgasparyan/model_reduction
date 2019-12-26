@@ -3,7 +3,7 @@ clc
 close
 %==========================================================================
 %Call the inputs of the model reduction
-Model = load('HSP');
+Model = load('Inputs');
 global Z B k 
 %--------------------------------------------------------------------------
 Z = Model.Z; B= Model.B; x_0 = Model.x_0; k = Model.k;  
