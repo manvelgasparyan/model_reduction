@@ -1,1 +1,68 @@
+This repository contains the Matlab library of the automated model reduction method proposed by M. Gasparyan et al.. 
 
+The main reduction procedure can be found in the folder "Reduction_procedure" located in the folder "scr". 
+It uses the information of a given biochemical reaction network (CRN) provided by the user to automatically 
+reduce the corresponding mathematical model. We have provided two examples of real-life CRNs, namely, a model 
+of neural stem cll regulation (NSCR) and a model of hedgehog signaling pathway (HSP). The input files corresponding 
+to each example can be found in the folder "Examples" located in the folder "scr". For each example, there are two 
+input files, namely, "Inputs" and "Denominator".
+
+The file named "Inputs" contains the following information of a given CRN
+     1. The complex composition matrix.
+     2. The incidence matrix.
+     3. The vector of rate constants of the reactions.
+     4. The vector of initial species' concentrations.
+     5. The user-specified treshold value of the error integral. 
+     
+For our real-life examples, the treshold value of the error integral has been set to 0.15. In general, this treshold 
+can be choosen depending on the desired closeness of the reduced model to the original model.
+     
+The file named "Denominator" is a Matlab function corresponding to the rational terms in the expressions of reaction rates.
+
+In order to proceed the reduction (for each example), the user needs to:
+     1. Open the files "Inputs" and "Denominator" with all the files of the folder "Reduction_procedure".
+     2. Run the file "Inputs".
+     3. Run the file "Main".
+     
+The automatic reduction procedure provides the following outputs:
+     1. The mathematical model and the complex graph corresponding to the original network.
+     2. The mathematical model and the complex graph corresponding to the reduced network.
+     3. The final value of the error integral.
+     4. Comparison of concentration profiles of the important species between the original and the reducd models.  
+     
+     
+     
+REFERENCES
+
+[1] Athel Cornish-Bowden. Fundamentals of enzyme kinetics. Wiley-Blackwell Weinheim, 2012.
+
+[2] Martin Feinberg. Chemical reaction network structure and the stability of complex isothermal reactor - i. 
+the deficiency zero and deficiency one theorems. Chemical Engineering Science, 42(10):2229-2268, 1987.
+
+[3] Manvel Gasparyan, Arnout Van Messem, and Shodhan Rao. A novel technique for model reduction of biochemical 
+reaction networks. IFAC-PapersOnLine, 51(19):28-31, 2018.
+
+[4] Gabriel Kron. Tensor analysis of networks. New York, 1939.
+
+[5] Nicolas Le Novere, Benjamin Bornstein, Alexander Broicher, Melanie Courtot, Marco Donizelli, Harish Dharuri, 
+Lu Li, Herbert Sauro, Maria Schilstra, Bruce Shapiro, et al. Biomodels database: a free, centralized database of 
+curated, published, quantitative kinetic models of biochemical and cellular systems. 
+Nucleic acids research, 34:D689-D691, 2006.
+
+[6] Ovidiu Radulescu, Alexander N Gorban, Andrei Zinovyev, and Vincent Noel. Reduction of dynamical biochemical 
+reactions networks in computational biology. Frontiers in genetics, 3:131, 2012.
+
+[7] Shodhan Rao, Arjan van der Schaft, and Bayu Jayawardhana. A graph-theoretical approach for the analysis and 
+model reduction of complex-balanced chemical reaction networks. Journal of Mathematical Chemistry, 51(9):2401-2422, 2013.
+
+[8] Shodhan Rao, Arjan Van der Schaft, Karen Van Eunen, Barbara M Bakker, and Bayu Jayawardhana. A model reduction 
+method for biochemical reaction networks. BMC systems biology, 8(1):52, 2014.
+
+[9] Irwin H Segel. Biochemical calculations. Wiley, 1975.
+
+[10] Krishnankutty Chandrika Sivakumar, Sivadasan Bindu Dhanesh, Sekar Shobana, Jackson James, and Sathish Mundayoor. 
+A systems biology approach to model neural stem cell regulation by notch, shh, wnt, and egf signaling pathways. Omics: 
+a journal of integrative biology, 15(10):729-737, 2011.
+
+[11] Thomas J Snowden, Piet H van der Graaf, and Marcus J Tindall. Methods of model reduction for large-scale biological 
+systems: a survey of current methods and trends. Bulletin of mathematical biology, 79(7):1449-1486, 2017.
