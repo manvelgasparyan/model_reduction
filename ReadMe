@@ -32,37 +32,3 @@ The automatic reduction procedure provides the following outputs:
      
      
      
-REFERENCES
-
-[1] Athel Cornish-Bowden. Fundamentals of enzyme kinetics. Wiley-Blackwell Weinheim, 2012.
-
-[2] Martin Feinberg. Chemical reaction network structure and the stability of complex isothermal reactor - i. 
-the deficiency zero and deficiency one theorems. Chemical Engineering Science, 42(10):2229-2268, 1987.
-
-[3] Manvel Gasparyan, Arnout Van Messem, and Shodhan Rao. A novel technique for model reduction of biochemical 
-reaction networks. IFAC-PapersOnLine, 51(19):28-31, 2018.
-
-[4] Gabriel Kron. Tensor analysis of networks. New York, 1939.
-
-[5] Nicolas Le Novere, Benjamin Bornstein, Alexander Broicher, Melanie Courtot, Marco Donizelli, Harish Dharuri, 
-Lu Li, Herbert Sauro, Maria Schilstra, Bruce Shapiro, et al. Biomodels database: a free, centralized database of 
-curated, published, quantitative kinetic models of biochemical and cellular systems. 
-Nucleic acids research, 34:D689-D691, 2006.
-
-[6] Ovidiu Radulescu, Alexander N Gorban, Andrei Zinovyev, and Vincent Noel. Reduction of dynamical biochemical 
-reactions networks in computational biology. Frontiers in genetics, 3:131, 2012.
-
-[7] Shodhan Rao, Arjan van der Schaft, and Bayu Jayawardhana. A graph-theoretical approach for the analysis and 
-model reduction of complex-balanced chemical reaction networks. Journal of Mathematical Chemistry, 51(9):2401-2422, 2013.
-
-[8] Shodhan Rao, Arjan Van der Schaft, Karen Van Eunen, Barbara M Bakker, and Bayu Jayawardhana. A model reduction 
-method for biochemical reaction networks. BMC systems biology, 8(1):52, 2014.
-
-[9] Irwin H Segel. Biochemical calculations. Wiley, 1975.
-
-[10] Krishnankutty Chandrika Sivakumar, Sivadasan Bindu Dhanesh, Sekar Shobana, Jackson James, and Sathish Mundayoor. 
-A systems biology approach to model neural stem cell regulation by notch, shh, wnt, and egf signaling pathways. Omics: 
-a journal of integrative biology, 15(10):729-737, 2011.
-
-[11] Thomas J Snowden, Piet H van der Graaf, and Marcus J Tindall. Methods of model reduction for large-scale biological 
-systems: a survey of current methods and trends. Bulletin of mathematical biology, 79(7):1449-1486, 2017.
