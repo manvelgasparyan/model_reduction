@@ -1,4 +1,5 @@
-This repository contains the Matlab library of the automated model reduction method proposed by M. Gasparyan et al.. 
+This repository contains the Matlab library corresponding to the manuscript "An automated model reduction method for 
+biochemical reaction networks" published in Symmetry. The manuscript is available at https://www.mdpi.com/2073-8994/12/8/1321.
 
 The main reduction procedure can be found in the folder "Reduction_procedure" located in the folder "scr". 
 It uses the information of a given biochemical reaction network (CRN) provided by the user to automatically 
@@ -28,7 +29,4 @@ The automatic reduction procedure provides the following outputs:
      1. The mathematical model and the complex graph corresponding to the original network.
      2. The mathematical model and the complex graph corresponding to the reduced network.
      3. The final value of the error integral.
-     4. Comparison of concentration profiles of the important species between the original and the reducd models.  
-     
-     
-     
+     4. Comparison of concentration profiles of the important species between the original and the reducd models. 
