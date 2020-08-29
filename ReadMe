@@ -13,7 +13,7 @@ The file named "Inputs" contains the following information of a given CRN
      2. The incidence matrix.
      3. The vector of rate constants of the reactions.
      4. The vector of initial species' concentrations.
-     5. The user-specified treshold value of the error integral. 
+     5. The user-specified threshold value of the error integral. 
      
 For our real-life examples, the treshold value of the error integral has been set to 0.15. In general, this treshold 
 can be choosen depending on the desired closeness of the reduced model to the original model.
