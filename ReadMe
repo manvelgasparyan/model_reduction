@@ -3,8 +3,8 @@ biochemical reaction networks" published in Symmetry. The manuscript is availabl
 
 The main reduction procedure can be found in the folder "Reduction_procedure" located in the folder "scr". 
 It uses the information of a given biochemical reaction network (CRN) provided by the user to automatically 
-reduce the corresponding mathematical model. We have provided two examples of real-life CRNs, namely, a model 
-of neural stem cll regulation (NSCR) and a model of hedgehog signaling pathway (HSP). The input files corresponding 
+reduce the corresponding mathematical model. We have provided two examples of real-life CRNs retrieved from the BioModels database [1], namely, a model 
+of neural stem cll regulation (NSCR), [2], and a model of hedgehog signaling pathway (HSP), [2]. The input files corresponding 
 to each example can be found in the folder "Examples" located in the folder "scr". For each example, there are two 
 input files, namely, "Inputs" and "Denominator".
 
@@ -30,3 +30,9 @@ The automatic reduction procedure provides the following outputs:
      2. The mathematical model and the complex graph corresponding to the reduced network.
      3. The final value of the error integral.
      4. Comparison of concentration profiles of the important species between the original and the reducd models. 
+     
+REFERENCES
+
+[1] Le Novere, N.; Bornstein, B.; Broicher, A.; Courtot, M.; Donizelli, M.; Dharuri, H.; Li, L.; Sauro, H.; Schilstra, M.; Shapiro, B.; et al. BioModels Database: A free, centralized database of curated, published, quantitative kinetic models of biochemical and cellular systems. Nucleic Acids Res. 2006, 34, D689–D691.
+
+[2] Sivakumar, K.C.; Dhanesh, S.B.; Shobana, S.; James, J.; Mundayoor, S. A systems biology approach to model neural stem cell regulation by notch, shh, wnt, and EGF signaling pathways. Omics J. Integr. Biol. 2011, 15, 729–737. 
