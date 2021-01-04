@@ -20,7 +20,7 @@ can be choosen depending on the desired closeness of the reduced model to the or
      
 The file named "Denominator" is a Matlab function corresponding to the rational terms in the expressions of reaction rates.
 
-In order to proceed the reduction (for each example), the user needs to:
+In order to proceed with the reduction (for each example), the user needs to:
      1. Open the files "Inputs" and "Denominator" with all the files located in the folder "Reduction_procedure".
      2. Run the file "Inputs".
      3. Run the file "Main".
