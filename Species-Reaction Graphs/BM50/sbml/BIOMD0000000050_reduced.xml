@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="metaid_0000001" version="4">
+    <model id="Kinetic_modelling_of_Amadori_degradation" metaid="metaid_0000035" name="Martins2003_AmadoriDegradation">
+    
+        <listOfUnitDefinitions>
+              <unitDefinition id="substance" metaid="metaid_0000002" name="micromole (default)">
+                 <listOfUnits> <unit kind="mole" metaid="_0c6bf0ae-5995-4ff0-a9bd-3e58caca0e63" scale="-6"/>  </listOfUnits>
+              </unitDefinition>
+              <unitDefinition id="time" metaid="metaid_0000003" name="minute (default)">
+                  <listOfUnits> <unit kind="second" metaid="db32a296-7fc4-405f-9d5f-27d5045f9c9b" multiplier="60"/> </listOfUnits>
+              </unitDefinition>
+        </listOfUnitDefinitions>
+    
+    
+    
+        <listOfCompartments>
+          <compartment id="compartment" metaid="metaid_0000004" size="1"/>
+        </listOfCompartments>
+
+        <listOfSpecies>
+          <species compartment="compartment" id="DFG2" initialConcentration="9" metaid="metaid_0000005"/>
+          <species compartment="compartment" id="Cn2" initialConcentration="0" metaid="metaid_0000008"/>
+          <species compartment="compartment" id="Gly2" initialConcentration="0" metaid="metaid_0000009"/>
+          <species compartment="compartment" id="FA2" initialConcentration="0" metaid="metaid_0000011"/>
+          <species compartment="compartment" id="AA2" initialConcentration="0" metaid="metaid_0000013"/>
+          <species compartment="compartment" id="Man2" initialConcentration="0" metaid="metaid_0000014"/>
+          <species compartment="compartment" id="MG2" initialConcentration="0" metaid="metaid_0000016"/>
+          <species compartment="compartment" id="Mel2" initialConcentration="0" metaid="metaid_0000017"/>
+          <species compartment="compartment" id="Fru2" initialConcentration="0" metaid="metaid_0000018"/>
+        </listOfSpecies>
+    
+        <listOfReactions>
+          <reaction id="v3r" metaid="metaid_0000021r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="fa9af671-0ff3-4c79-b09e-68b2a837bb5br" species="DFG2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_230de962-3e7d-4658-bd31-ff332bd2ae21r" species="Gly2"/>
+              <speciesReference metaid="_352cf343-68ca-47a8-aff9-89343390857er" species="Cn2"/>
+            </listOfProducts>
+            <kineticLaw metaid="e3068862-7a76-45e3-95d8-a46e81d328b4">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> k3 </ci>
+                  <ci> DFG2 </ci>
+                </apply>
+              </math>
+              <listOfParameters>
+                <parameter id="k3" metaid="_464207r" value="0.0155"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+          
+          <reaction id="v4r" metaid="metaid_0000022r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="ba0f907b-7285-4ea5-a15a-9f40a4fe072ar" species="DFG2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_46ff3b57-53bf-4b08-905c-942ab621ef1cr" species="Gly2"/>
+              <speciesReference metaid="_92879309-a9e6-4b93-b032-5162cab90e8fr" species="Cn2"/>
+              <speciesReference metaid="_92879309-a9e6-4b93-b032-5162cab90e8f-2r" species="FA2"/>
+            </listOfProducts>
+            <kineticLaw metaid="_75a6fc02-4003-4bb3-ae4d-406a5823a855">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> p4 </ci>
+                  <ci> DFG2 </ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="p4" metaid="_464208r" value="0.0017"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+          <reaction id="v7r" metaid="metaid_0000025r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="_8a781e2f-f756-40ff-9d03-3844a3992795r" species="DFG2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_35ec86aa-8311-417b-83cf-4dc59352ba98r" species="Gly2"/>
+              <speciesReference metaid="e39be961-1010-46ea-9ed2-0b46e194625br" species="Cn2"/>
+              <speciesReference metaid="e39be961-1010-46ea-9ed2-0b46e194625b-2r" species="AA2"/>
+            </listOfProducts>
+            <kineticLaw metaid="c30c0adc-8b87-4b87-8abe-22ec5620a2f8">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> p7 </ci>
+                  <ci> DFG2 </ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="p7" metaid="_464212r" value="0.0147"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+
+          <reaction id="v10r" metaid="metaid_0000028r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="_8b263b94-0690-48b2-9c9c-5cf486d1eeedr" species="DFG2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="bf9c9fe5-d095-41f9-ae62-24e1fbf708efr" species="Gly2"/>
+              <speciesReference metaid="_1dd0df6d-1070-48ee-a94c-c795c9301a66r" species="Man2"/>
+            </listOfProducts>
+            <kineticLaw metaid="_5e21752f-a298-4eda-8bc5-4beb3b4bdd9f">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> p10 </ci>
+                  <ci> DFG2 </ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="p10" metaid="_464216r" value="0.0015"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+          <reaction id="v11r" metaid="metaid_0000029r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="_3e204d99-b48c-41ec-b9d2-f3d3e350fca6r" species="DFG2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="a71354e5-75c8-4944-8393-5fe241609230r" species="Gly2"/>
+              <speciesReference metaid="_4c993184-4f45-4b7e-a2e2-82cb71586462r" species="FA2"/>
+            </listOfProducts>
+            <kineticLaw metaid="_8e40bad9-6ec3-472c-951a-aa0153c1e8c2">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> p11 </ci>
+                  <ci> DFG2</ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="p11" metaid="_464217r" value="0.0024"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+          <reaction id="v12r" metaid="metaid_0000030r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="_7b1485b4-9828-4360-883b-9a0fae7b59b2r" species="Man2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_1ed2e2a9-6951-4acc-9bab-dff6fa2ffe9cr" species="Cn2"/>
+              <speciesReference metaid="_1ed2e2a9-6951-4acc-9bab-dff6fa2ffe9c-2r" species="FA2"/>
+            </listOfProducts>
+            <kineticLaw metaid="_7b680d62-0b1e-4d2d-8142-e24823af472e">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> k12 </ci>
+                  <ci> Man2</ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="k12" metaid="_464219r" value="0.0008"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+          
+          <reaction id="v14r" metaid="metaid_0000032r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="_18a735b3-16de-4146-850d-99a0c3775310r" species="Gly2"/>
+              <speciesReference metaid="_8326488b-dcf4-4da4-91d1-95a09166cc03r" species="Cn2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_4c06c864-375e-436b-9032-439e006475eb" species="Mel2"/>
+            </listOfProducts>
+            <kineticLaw metaid="be031871-d048-4a47-945e-65eb5c794b5e">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> k14 </ci>
+                  <ci> Cn2 </ci>
+                  <ci> Gly2 </ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="k14" metaid="_464221r" value="0.0034"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+          <reaction id="v15r" metaid="metaid_0000033r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="b400eba0-294b-4bc0-8fa8-07faad61bb16r" species="Cn2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_0cfa4a2b-86be-48ca-a86b-53441cfc3654r" species="AA2"/>
+              <speciesReference metaid="f9f33be9-ef47-4a66-bb00-f9a7d3a234f5r" species="FA2"/>
+              <speciesReference metaid="b17d3dcb-0f91-4244-b8de-f4b28fae31ber" species="MG2"/>
+            </listOfProducts>
+            <kineticLaw metaid="_24a3efbc-9ab0-419e-bd47-0dfb054e9800">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> k15 </ci>
+                  <ci> Cn2 </ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="k15" metaid="_464223r" value="0.0159"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+          <reaction id="v16r" metaid="metaid_0000034r" reversible="false">
+            <listOfReactants>
+              <speciesReference metaid="_3d4fd243-3a80-4497-ade4-90566b3171der" species="DFG2"/>
+            </listOfReactants>
+            <listOfProducts>
+              <speciesReference metaid="_96282ec0-a524-48ff-b63b-1a00d8d06e91r" species="Gly2"/>
+              <speciesReference metaid="_0d68de0a-63fa-4652-8be0-aff992fecfd5r" species="Fru2"/>
+            </listOfProducts>
+            <kineticLaw metaid="e395f7b0-86ad-4f3e-8269-682c86b1a663">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">          
+                <apply>
+                  <times/>
+                  <ci> p16 </ci>
+                  <ci> DFG2 </ci>
+                </apply>
+              </math>
+                      <listOfParameters>
+                <parameter id="p16" metaid="_464224r" value="0.000925"/>
+              </listOfParameters>
+            </kineticLaw>
+          </reaction>
+
+        </listOfReactions>
+  </model>
+</sbml>
