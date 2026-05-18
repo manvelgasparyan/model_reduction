@@ -1,0 +1,76 @@
+%Stoichiometric matrix
+S = [-1  1  0;
+      1 -1 -1;
+      0  0 -1;
+      0  0  1];
+%---
+%Species and reaction numbers
+[n_s, n_r] = size(S);
+%---
+%species concentrations, rate constants and rational terms
+syms s [n_s 1] positive
+syms k [n_r 1] positive
+syms g [n_r 1] positive
+s
+%===========================
+%Reaction rates
+Delta = - min(S,0);
+v = simplify(diag(g)*diag(k)*exp(Delta'*log(s)));
+v
+%===========================
+%Species-reaction graph
+G = sr_graph (S)
+w = sr_graph_weights (S, v, s)
+%-----------
+%Plot the species-reaction graph
+plot_sr_graph (G, n_s, n_r)
+%===========================
+%Laplacian of the species-reaction graph
+L = Laplacian_matrix(w, G)
+%===========================
+%Check Remark 1 conditions
+is_L_Lalpacian = is_Laplacian_matrix(L, n_s);
+%===========================
+%Candidates for removal
+[candidates_species, candidates_reactions] = removal_candidates (L, n_s)
+%===========================
+%{
+%Delete the candidate pair p
+p = 2;
+I_1 = candidates_species{p};
+I_2 = candidates_reactions{p};
+%===========================
+[Schur] = Schur_complement (L, I_1, I_2, n_s)
+%===========================
+G_red = sr_graph_L (n_s, L, I_1, I_2)
+%-----------
+n_s_red = n_s - numel(I_1);
+n_r_red = n_r - numel(I_2);
+%-----------
+plot_sr_graph (G_red, n_s_red, n_r_red)
+%}
+%===========================
+%Initial concentrations
+X_0 = [4 2 2 1;
+       3 4 1 2;
+       1 3 3 1];
+%===========================
+%Settling time and number of timepoints
+T = 10;
+n = 100;
+%===========================
+%Parameter values
+k_0 = [4.1; 2.59; 3.1];
+%===========================
+%Integrate the original  model
+[time, conc] = demo_example_orig_conc (k_0, S, X_0, T, n)
+%===========================
+%Plot original concentrations
+plot_conc (time, conc, s)
+%===========================
+
+
+
+
+
+
